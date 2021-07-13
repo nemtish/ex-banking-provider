@@ -1,8 +1,9 @@
 # ex-banking-provider
 
+
 ## Installation
 This package requires `Node.js v12+`.
-To install, run `npm install ex-banking-provider`
+To install, run `npm i ex-banking-provider`
 
 ## Usage
 
