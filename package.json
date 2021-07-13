@@ -1,6 +1,6 @@
 {
   "name": "ex-banking-provider",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Nemanja Tisma",
   "description": "Small example of banking app written in typescript",
   "keywords": [
@@ -20,7 +20,7 @@
     "build": "tsc",
     "test": "jest",
     "publish-minor": "npm run test && npm version minor && npm publish && git push && git push --tags",
-    "prepare" : "npm run build",
+    "prepare": "npm run build",
     "postpublish": "git push --follow-tags"
   },
   "devDependencies": {
