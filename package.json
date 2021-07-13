@@ -1,0 +1,46 @@
+{
+  "name": "ex-banking-provider",
+  "version": "1.0.1",
+  "author": "Nemanja Tisma",
+  "description": "Small example of banking app written in typescript",
+  "keywords": [
+    "banking"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "publish-minor": "npm run test && npm version minor && npm publish && git push && git push --tags",
+    "prepare" : "npm run build",
+    "prepublish": "npm build && npm test"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.6",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "uuidv4": "^6.2.11"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
