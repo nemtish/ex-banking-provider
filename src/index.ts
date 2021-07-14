@@ -33,7 +33,7 @@ export default class ExBankingProvider implements IExBanking {
             validateWalletAction(username, amount, currency);
 
             const user = userService.findByUsername(username);
-            const wallet = walletService.deposit(user, amount, currency.toUpperCase());
+            const wallet = walletService.deposit(user, amount, currency);
 
             return {
                 success: true,
@@ -53,7 +53,7 @@ export default class ExBankingProvider implements IExBanking {
             validateWalletAction(username, amount, currency);
 
             const user = userService.findByUsername(username);
-            const currencyWallet = walletService.withdraw(user, amount, currency.toUpperCase());
+            const currencyWallet = walletService.withdraw(user, amount, currency);
 
             return {
                 success: true,
@@ -72,7 +72,7 @@ export default class ExBankingProvider implements IExBanking {
             const user = userService.findByUsername(username);
             const currencyWallet = walletService.getOrCreateCurrencyWallet(
                 user,
-                currency.toUpperCase()
+                currency
             );
 
             return {
@@ -97,7 +97,7 @@ export default class ExBankingProvider implements IExBanking {
             validateWalletAction(fromUsername, amount, currency);
             validateUsername(toUsername);
 
-            const newBalances = walletService.transaction(fromUsername, toUsername, amount, currency.toUpperCase());
+            const newBalances = walletService.transaction(fromUsername, toUsername, amount, currency);
 
             return { success: true, ...newBalances };
         } catch (e) {
