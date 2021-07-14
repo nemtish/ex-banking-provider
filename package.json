@@ -1,6 +1,6 @@
 {
   "name": "ex-banking-provider",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "author": "Nemanja Tisma",
   "description": "Small example of banking app written in typescript",
   "keywords": [
