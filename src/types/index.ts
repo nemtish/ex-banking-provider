@@ -7,6 +7,7 @@ export enum ErrorMessage {
     WALLET_ALREADY_EXISTS = 'Wallet already exists',
     SENDER_DOES_NOT_EXIST = 'Sender does not exist',
     RECEIVER_DOES_NOT_EXIST = 'Receiver does not exist',
+    CURRENCY_NOT_ALLOWED = 'Currency not allowed',
 }
 export type Ok = { success: true };
 export type Error = { success: false, message: string };

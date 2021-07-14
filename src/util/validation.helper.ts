@@ -13,6 +13,11 @@ export const validateAmount = (amount: number): boolean => {
 
 export const validateCurrency = (currency: string): boolean => {
     if (currency.length == 0) throw new Error(ErrorMessage.WRONG_ARGUMENTS);
+    // add validation of currency type if needed
+    const notAllowedCurrencies: string[] = [];
+    const notValid = notAllowedCurrencies.some(c => c == currency);
+    if (notValid) throw new Error(ErrorMessage.CURRENCY_NOT_ALLOWED)
+
     return true;
 };
 
